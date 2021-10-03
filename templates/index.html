@@ -2,12 +2,23 @@
 
 {% block content %}
 <form method="post">
-    x: <input type="text" name="x" autocomplete="off" required>
-    y: <input type="text" name="y" autocomplete="off" required>
+    x:
+    <select name="group" id="group" value="1">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    </select>
+    y:
+    <select name="group1" id="group1" value="1">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    </select>
     <input class="btn" type="submit" name="submit" value="Mul">
 </form>
 <span id="res_box"> 
     Output:   {{res}}
 </span> 
+
 <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}" title="to~to~ro~">
 {% endblock %}

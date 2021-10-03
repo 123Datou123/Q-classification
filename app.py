@@ -75,8 +75,8 @@ def page_not_found(e):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        x = int(request.form['x'])
-        y = int(request.form['y'])
+        x = int(request.form['group'])
+        y = int(request.form['group1'])
 
         if not x > 0 or not y >0:
             flash('Invalid input.')
