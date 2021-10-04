@@ -55,10 +55,23 @@
     J<sub>w</sub> (Joint Water Reduction Factor):<br>
     <select name="group4" id="group4" value="1">
         <option value="1">Dry excavations or minor inflow, i.e. < 5 l/min locally. <br>
-            p<sub>w</sub> < 1 kg &frasl; m<sup>3</sup><br>, Jw = 1
+            (p<sub>w</sub> < 1 kg &frasl; m<sup>3</sup><br>, Jw = 1)
         </option>
         <option value="2">Medium inflow or pressure, occasional outwash of joint fillings.<br>
-        p<sub>w</sub> 1 kg &frasl; m<sup>3</sup><br>, Jw = 0.66</option>
+        (p<sub>w</sub> 1-2.5 kg &frasl; m<sup>3</sup><br>, Jw = 0.66)</option>
+        <option value="3">Large inflow or high pressure in competent rock with unfilled joints.<br>
+        (p<sub>w</sub> 2.5-10 kg &frasl; m<sup>3</sup><br>, Jw = 0.5)
+        </option>
+        <option value="4">Large inflow or high pressure, considerable outwash of joint fillings.<br>
+        (p<sub>w</sub> 2.5-10 kg &frasl; m<sup>3</sup><br>, Jw = 0.3)
+        </option>
+        <option value="5">
+        Exceptionally high inflow or water pressure at blasting, decaying with time.<br>
+        (p<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.2-0.1)
+        </option>
+        <option value="6">Exceptionally high inflow or water pressure continuing without noticeable decay.<br>
+        (p<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.1-0.05)    
+        </option>
     </select><br>
 
     <input class="btn" type="submit" name="submit" value="Cal">
