@@ -3,7 +3,7 @@
 {% block content %}
 <form method="post">
     RQD(Rock Quality Designation):<br>
-    <select name="group" id="group" value="1">
+    <select name="group" id="group" value="1"style="font-size:15px">
     <option value="1">1</option>
     <option value="1">Very poor ( RQD = 0 - 25% )</option>
     <option value="2">Poor ( RQD = 25% - 50% )</option>
@@ -13,7 +13,7 @@
     </select> <br>
 
     J<sub>n</sub>(Joint Set Number):<br>
-    <select name="group1" id="group1" value="1">
+    <select name="group1" id="group1" value="1" style="font-size:15px">
     <option value="1">1</option>
     <option value="1">Massive, no or few joints ( J<sub>n</sub> = 0.5 - 1 )</option>
     <option value="2">One joint set ( J<sub>n</sub> = 2 )</option>
@@ -28,7 +28,7 @@
     </select><br>
 
     J<sub>r</sub>(Joint Roughness Number):<br>
-    <select name="group2" id="group2" value="1">
+    <select name="group2" id="group2" value="1" style="font-size:15px">
     <option value="1">1</option>
     <option value="1">Discontinuous joints ( J<sub>r</sub> = 4)</option>
     <option value="2">Rough or irregular, undulating ( J<sub>r</sub> = 3)</option>
@@ -48,33 +48,102 @@
 
     J<sub>a</sub> (Joint Alteration Number):<br>
     For contact between joint walls<br>
-    <select name="group3" id="group3" value="1">
-        <option value="1"></option>
+    <select name="group3" id="group3" value="1" style="font-size:15px">
+        <option value="1">1</option>
     </select><br>
 
     J<sub>w</sub> (Joint Water Reduction Factor):<br>
-    <select name="group4" id="group4" value="1">
+    <select name="group4" id="group4" value="1" style="font-size:15px">
+        <option value="1">1</option>
         <option value="1">Dry excavations or minor inflow, i.e. < 5 l/min locally. <br>
-            (p<sub>w</sub> < 1 kg &frasl; m<sup>3</sup><br>, Jw = 1)
+            (&rho;<sub>w</sub> < 1 kg &frasl; m<sup>3</sup><br>, Jw = 1)
         </option>
         <option value="2">Medium inflow or pressure, occasional outwash of joint fillings.<br>
-        (p<sub>w</sub> 1-2.5 kg &frasl; m<sup>3</sup><br>, Jw = 0.66)</option>
+        (&rho;<sub>w</sub> 1-2.5 kg &frasl; m<sup>3</sup><br>, Jw = 0.66)</option>
         <option value="3">Large inflow or high pressure in competent rock with unfilled joints.<br>
-        (p<sub>w</sub> 2.5-10 kg &frasl; m<sup>3</sup><br>, Jw = 0.5)
+        (&rho;<sub>w</sub> 2.5-10 kg &frasl; m<sup>3</sup><br>, Jw = 0.5)
         </option>
         <option value="4">Large inflow or high pressure, considerable outwash of joint fillings.<br>
-        (p<sub>w</sub> 2.5-10 kg &frasl; m<sup>3</sup><br>, Jw = 0.3)
+        (&rho;<sub>w</sub> 2.5-10 kg &frasl; m<sup>3</sup><br>, Jw = 0.3)
         </option>
         <option value="5">
         Exceptionally high inflow or water pressure at blasting, decaying with time.<br>
-        (p<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.2-0.1)
+        (&rho;<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.2-0.1)
         </option>
         <option value="6">Exceptionally high inflow or water pressure continuing without noticeable decay.<br>
-        (p<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.1-0.05)    
+        (&rho;<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.1-0.05)    
+        </option>
+    </select><br> 
+
+    SRF (Stress Reduction Factor)<br>
+    (I) Weakness zones intersecting excavation<br>
+    <select name="group5" id="group5" value="1" style="font-size:15px"> 
+    <option value="1">1</option>  
+    <option value="1">
+    Multiple weakness zones with clay or chemically disintegrated rock, very loose surrounding rock (any depth) (SRF = 10)
+    </option>
+    <option value="2">
+    Single weakness zones containing clay or chemically disintegrated rock (depth of excavation < 50 m) ( SRF = 5 )
+    </option>
+    <option value="3">
+    Single weakness zones containing clay or chemically disintegrated rock (depth of excavation > 50 m) ( SRF = 2.5)
+    </option>
+    <option value="4">
+    Multiple shear zones in competent rock (clay-free), loose surrounding rock (any depth) ( SRF = 7.5)
+    </option>
+    <option value="5">
+    Single shear zones in competent rock (clay-free), loose surrounding rock (depth of excavation < 50 m) ( SRF = 5)
+    </option>
+    <option value="6">
+    Single shear zones in competent rock (clay-free), loose surrounding rock (depth of excavation > 50 m) ( SRF = 2.5 )
+    </option>
+    <option value="7">
+    Loose, open joints, heavily jointed or "sugar-cube", etc. (any depth)
+    ( SRF = 5)
+    </option>
+    </select>
+    (II) Competent rock, rock stress problems
+    <select name="group6" id="group6" value ="1" style="font-size:15px">
+    <option value="1">
+    Low stress, near surface, open joints (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> >200; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> < 0.01) ( SRF = 2.5)
+    </option>
+    <option value="2">
+    Medium stress, favourable stress condition (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> = 200-10; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> = 0.01-0.3) ( SRF = 1)
+    </option>
+    <option value="3">
+    High stress, very tight structure. Usually favourable to stability, may be except for walls (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> = 10-5; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> = 0.3-0.4) ( SRF = 0.5-2)
+    </option>
+    <option value="4">
+        Moderate slabbing after > 1 hour in massive rock (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> = 5-3; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> = 0.5-0.65) ( SRF = 5-50)
+    </option>
+    <option value="5">
+        Slabbing and rock burst after a few minutes in massive rock (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> = 3-2; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> = 0.65-1 ) ( SRF = 50-200)
+    </option>
+    <option value="6">
+        Heavy rock burst (strain burst) and immediate dynamic deformation in massive rock  (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> < 2>; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> > 1 ) ( SRF = 200-400)
+    </option>
+    </select><br>
+    (III)Squeezing rock<br>
+    Plastic flow of incompetent rock under the influence of high pressure<br>
+    <select name="group7" id="group7" value="1" style="font-size:15px">
+        <option value="1">
+            Mild squeezing rock pressure  (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> =1-5; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> > 1 ) ( SRF = 5-10)
+        </option>
+        <option value="2">
+            Heavy squeezing rock pressure (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub>  > 5; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> > 1 ) ( SRF = 10-20)
         </option>
     </select><br>
-
-    <input class="bot" type="submit" name="submit" value="Cal">
+    (IV)Swelling rock<br>
+    Chemical swelling activity depending on presence of water
+    <select name="group8" id="group8" value="1" style="font-size:15px;">
+        <option value="1">
+            Mild swelling rock pressure ( SRF = 5-10)
+        </option>
+        <option value="2">
+            eavy swelling rock pressure ( SRF = 10-15)
+        </option>
+    </select>
+    <input  type="submit" name="submit" value="Cal" style="font-size:15px;"><br>
 </form>
 <span id="res_box"> 
     The Q value : {{res}}

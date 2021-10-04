@@ -2,7 +2,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     margin: auto;
-    max-width: 1000px;
 }
 
 .avatar {
@@ -10,14 +9,14 @@ body {
     text-align: center;
 }
 
-
+nav{width: 100%;height:fit-content}
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-}
+} 
 
 nav li {
     float: left;
@@ -44,15 +43,14 @@ nav li a:hover {
     background-color: #cce5ff;
     border-color: #b8daff;
     border-radius: 5px;
-}
+} */
 
 /* 标题 */
 .header {
-    padding: 80px;
+    padding: 10px;
     text-align: center;
-    background: #34665c;
+    background: #084799;
     color: white;
-    width:fit-content;
 }
 
 /* 标题字体加大 */
@@ -72,7 +70,7 @@ input[name=year] {
     width: 50px;
 }
 
-.bot{
+/* .btn{
     font-size: 30px;
     padding: 40px 40px;
     text-decoration: none;
@@ -83,12 +81,12 @@ input[name=year] {
     border-radius: 5px;
 }
 
-.bot:hover {
+.btn:hover {
     text-decoration: none;
     background-color: black;
     color: rgb(94, 187, 31);
     border: 40px solid black;
-}
+} */
 
 /* .movie-list {
     list-style-type: none;
@@ -133,6 +131,58 @@ input[name=year] {
     margin:  auto;
     max-width:400%;
 } */
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(167, 24, 185);
+}
+
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(22, 10, 10);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: rgb(40, 23, 63);
+    color: rgb(167, 157, 157);
+}
+
+
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: rgb(83, 12, 141);
+    padding: 20px;
+}
 
 footer {
     color: #888;
@@ -140,3 +190,17 @@ footer {
     text-align: center;
     padding: 20px;
 }
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+x`
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+/* @media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+} */ 

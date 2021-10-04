@@ -11,18 +11,23 @@
 </head>
 <body>
     {% for message in get_flashed_messages() %}
-        <div class="alert">{{ message }}</div>
+        <!-- <div class="alert">{{ message }}</div> -->
     {% endfor %}
-    <div class="header">
         <!-- <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}"> -->
-        <h2>Q-classification</h2>
-    </div>
-   
+        <div><h1>Q-classification</h1></div>
     <nav>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
         </ul>
     </nav>
+<!-- <div class="row">
+    <div class="side">
+       
+    </div>
+    <div class="main">
+        <a href="{{ url_for('index') }}"></a>
+    </div>
+</div> -->
     {% block content %}{% endblock %}
     <footer>
         <small>&copy; 2021 <a href="https://www.cedd.gov.hk/eng/publications/geo/geoguides/geo-g4/index.html">Q-classfication</a></small>
