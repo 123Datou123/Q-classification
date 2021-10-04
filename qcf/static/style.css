@@ -9,18 +9,6 @@ body {
     width: 10px;
     text-align: center;
 }
-/* 标题 */
-.header {
-    padding: 80px;
-    text-align: center;
-    background: #68bc1a;
-    color: white;
-}
-
-/* 标题字体加大 */
-.header h1 {
-    font-size: 40px;
-}
 
 
 nav ul {
@@ -37,14 +25,14 @@ nav li {
 
 nav li a {
     display: block;
-    color: white;
+    color: rgb(39, 80, 214);
     text-align: center;
     padding: 8px 12px;
     text-decoration: none;
 }
 
 nav li a:hover {
-    background-color: #111;
+    background-color: rgb(185, 22, 164);
 }
 
 .alert {
@@ -62,8 +50,9 @@ nav li a:hover {
 .header {
     padding: 80px;
     text-align: center;
-    background: #1abc9c;
+    background: #34665c;
     color: white;
+    width:fit-content;
 }
 
 /* 标题字体加大 */
@@ -76,7 +65,7 @@ input[type=submit] {
 }
 
 input[type=text] {
-    border: 1px solid #ddd;
+    border: 10px solid #ddd;
 }
 
 input[name=year] {

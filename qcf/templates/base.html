@@ -13,11 +13,11 @@
     {% for message in get_flashed_messages() %}
         <div class="alert">{{ message }}</div>
     {% endfor %}
-    <h2>
+    <div class="header">
         <!-- <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}"> -->
-        Q-classification
-        
-    </h2>
+        <h2>Q-classification</h2>
+    </div>
+   
     <nav>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
