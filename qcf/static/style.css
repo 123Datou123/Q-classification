@@ -1,13 +1,25 @@
 body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
     margin: auto;
-    max-width: 580px;
-    font-size: 20px;
-    font-family: Helvetica, Arial, sans-serif;
+    max-width: 1000px;
 }
 
 .avatar {
     width: 10px;
     text-align: center;
+}
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #68bc1a;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
 }
 
 
@@ -71,25 +83,25 @@ input[name=year] {
     width: 50px;
 }
 
-.btn {
+.bot{
     font-size: 30px;
     padding: 40px 40px;
     text-decoration: none;
     cursor: pointer;
     background-color: white;
     color: rgb(30, 28, 148);
-    border: 100px solid #555555;
+    border: 40px solid #3288ce;
     border-radius: 5px;
 }
 
-.btn:hover {
+.bot:hover {
     text-decoration: none;
     background-color: black;
-    color: rgb(136, 50, 50);
-    border: 100px solid black;
+    color: rgb(94, 187, 31);
+    border: 40px solid black;
 }
 
-.movie-list {
+/* .movie-list {
     list-style-type: none;
     padding: 0;
     margin-bottom: 10px;
@@ -106,8 +118,8 @@ input[name=year] {
 }
 
 .movie-list li:hover {
-    background-color: #f8f9fa;
-}
+    background-color: #f8f9fa; */
+/* } */
 
 .float-right {
     float: right;
@@ -117,7 +129,7 @@ input[name=year] {
     display: inline;
 }
 
-.imdb {
+/* .imdb {
     font-size: 12px;
     font-weight: bold;
     color: black;
@@ -131,7 +143,7 @@ input[name=year] {
     display: block;
     margin:  auto;
     max-width:400%;
-}
+} */
 
 footer {
     color: #888;
