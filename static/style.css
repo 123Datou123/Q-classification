@@ -1,13 +1,15 @@
 body {
     margin: auto;
     max-width: 580px;
-    font-size: 14px;
+    font-size: 20px;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 .avatar {
-    width: 40px;
+    width: 10px;
+    text-align: center;
 }
+
 
 nav ul {
     list-style-type: none;
@@ -122,5 +124,5 @@ footer {
     color: #888;
     margin-top: 15px;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }

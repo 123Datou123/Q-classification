@@ -39,7 +39,7 @@ def forge():
     """Generate fake data."""
     db.create_all()
 
-    name = 'Grey Li'
+    name = 'Q-Classification'
 
     user = User(name=name)
     # res = 0    
@@ -77,13 +77,14 @@ def index():
     if request.method == 'POST':
         x = int(request.form['group'])
         y = int(request.form['group1'])
+        z = int(request.form['group2'])
 
         if not x > 0 or not y >0:
             flash('Invalid input.')
             return redirect(url_for('index'))
-        res = x*y
+        res = x*y*z
         # return redirect(url_for('index'))
-        return render_template('index.html',res = res)
+        return render_template('edit.html')
 
     # movies = Movie.query.all()
     return render_template('index.html')
