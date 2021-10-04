@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post">
+    RQD(Rock Quality Designation):<br>
+    <select name="group" id="group" value="1">
+    <option value="1">1</option>
+    <option value="1">Very poor ( RQD = 0 - 25% )</option>
+    <option value="2">Poor ( RQD = 25% - 50% )</option>
+    <option value="3">Fair ( RQD = 50% - 75% )</option>
+    <option value="4">Good ( RQD = 75% - 90% )</option>
+    <option value="5">Excellent ( RQD = 90% - 100% )</option>  
+    </select> <br>
+
+    J<sub>n</sub>(Joint Set Number):<br>
+    <select name="group1" id="group1" value="1">
+    <option value="1">1</option>
+    <option value="1">Massive, no or few joints ( J<sub>n</sub> = 0.5 - 1 )</option>
+    <option value="2">One joint set ( J<sub>n</sub> = 2 )</option>
+    <option value="3">One joint set plus random joints ( J<sub>n</sub> = 2 )</option>
+    <option value="4">Two joint sets ( J<sub>n</sub> = 4 )</option>
+    <option value="5">Two joint sets plus random joints ( J<sub>n</sub> = 6 )</option>
+    <option value="6">Three joint sets ( J<sub>n</sub> = 9 )</option>
+    <option value="7">Three joint sets plus random joints ( J<sub>n</sub> = 12 )</option>
+    <option value="8">Four or more joint sets, heavily jointed, "sugar-cube", etc.( J<sub>n</sub> = 15 )</option>
+    <option value="9">Three joint sets ( J<sub>n</sub> = 9 )</option>
+    <option value='10'>Crushed rock, earthlike ( J<sub>n</sub> = 20 )</option>
+    </select><br>
+
+    J<sub>r</sub>(Joint Roughness Number):<br>
+    <select name="group2" id="group2" value="1">
+    <option value="1">1</option>
+    <option value="1">Discontinuous joints ( J<sub>r</sub> = 4)</option>
+    <option value="2">Rough or irregular, undulating ( J<sub>r</sub> = 3)</option>
+    <option value="3">Smooth, undulating ( J<sub>r</sub> = 2)</option>
+    <option value="4">Slickensided, undulating ( J<sub>r</sub> = 1.5)</option>
+    <option value="5">Rough or irregular, planar ( J<sub>r</sub> = 1.5)</option>
+    <option value="6">Smooth, planar (J<sub>r</sub> = 1.0)</option>
+    <option value="7">Slickensided, planar (J<sub>r</sub> = 0.5)</option>
+    <option value="8">Zone containing clay minerals thick enough to prevent rock-
+    wall contact (J<sub>r</sub> = 1.0)
+    </option>
+    <option value="9">Sandy, gravelly or crushed zone thick enough to prevent rock-
+    wall contact (J<sub>r</sub> = 1.0)
+    </option>
+    </select><br>
+
+
+    J<sub>a</sub> (Joint Alteration Number):<br>
+    For contact between joint walls<br>
+    <select name="group3" id="group3" value="1">
+        <option value="1"></option>
+    </select><br>
+
+    J<sub>w</sub> (Joint Water Reduction Factor):<br>
+    <select name="group4" id="group4" value="1">
+        <option value="1">Dry excavations or minor inflow, i.e. < 5 l/min locally. <br>
+            p<sub>w</sub> < 1 kg &frasl; m<sup>3</sup><br>, Jw = 1
+        </option>
+        <option value="2">Medium inflow or pressure, occasional outwash of joint fillings.<br>
+        p<sub>w</sub> 1 kg &frasl; m<sup>3</sup><br>, Jw = 0.66</option>
+    </select><br>
+
+    <input class="btn" type="submit" name="submit" value="Cal">
+</form>
+<span id="res_box"> 
+    The Q value : {{res}}
+</span> 
+
+<!-- <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}" title="to~to~ro~"> -->
+{% endblock %}
