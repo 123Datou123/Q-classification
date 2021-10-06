@@ -59,11 +59,12 @@ nav li a:hover {
 }
 
 input[type=submit] {
-    font-family: inherit;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 input[type=text] {
-    border: 10px solid #ddd;
+    border: 0;
+    padding: 0;
 }
 
 input[name=year] {

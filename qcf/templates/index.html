@@ -146,7 +146,33 @@
             eavy swelling rock pressure ( SRF = 10-15)
         </option>
     </select><br>
-    <input  type="submit" name="submit" value="Cal" style="font-size:15px;"><br>
+
+    What is the tunnel span or wall height(m)?<br>
+    <input  type="text" name="text" size="30"><br>
+
+    Type or use of underground opening<br>
+    <select id="group9" name="group9" value="1" style="font-size: 15px;">
+        <option value="1">1</option>
+        <option value="1">
+            Temporary mine openings ( ESR = 3.5 )
+        </option>
+        <option value="2">
+            Vertical shafts, rectangular and circular respectively ( ESR = 2.0-2.5 )
+        </option>
+        <option value="3">
+            Water tunnels, permanent mine openings, adits, drifts ( ESR = 1.6 )
+        </option>
+        <option value="4">
+            Storage caverns, road tunnels with little traffic, access tunnels, etc. ( ESR = 1.3 )
+        </option>
+        <option value="5">
+            Power stations, road and railway tunnels with heavy traffic, civil defence shelters, etc. ( ESR = 1.0 )
+        </option>
+        <option value="6">
+            Nuclear power plants, railroad stations, sport arenas, etc. ( ESR = 0.8 )
+        </option>
+    </select><br>
+<input type="submit" name="submit" value="Calculation" style="font-size: 25px;">
 </form>
 <span id="res_box"> 
     The Q value : {{res}}
