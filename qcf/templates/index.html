@@ -4,7 +4,7 @@
 <form method="post">
 <fieldset>
     RQD(Rock Quality Designation):<br>
-    <select name="group" id="group" value="1"style="font-size:15px">
+    <select name="group" id="group" value="1"style="font-size:20px">
     <option value="1">1</option>
     <option value="1">Very poor ( RQD = 0 -10%)</option>
     <option value="1">Very poor ( RQD = 10 - 25% )</option>
@@ -13,10 +13,19 @@
     <option value="4">Good ( RQD = 75% - 90% )</option>
     <option value="5">Excellent ( RQD = 90% - 100% )</option>  
     </select> <br>
+     <fieldset>
+         Notes:
+        <p style="font-size: 15px;">
+            (i) Where RQD is reported or measured as < 10 (including 0), a nominal value of 10 is used to evaluate Q.
+        </p>
+        <p style="font-size: 15px;">
+            (ii) RQD intervals of 5, i.e. 100, 95, 90, etc. are sufficiently accurate.
+        </p>
+    </fieldset>
 </fieldset>
 <fieldset>
      J<sub>n</sub>(Joint Set Number):<br>
-    <select name="group1" id="group1" value="1" style="font-size:15px">
+    <select name="group1" id="group1" value="1" style="font-size:20px">
     <option value="1">1</option>
     <option value="1">Massive, no or few joints ( J<sub>n</sub> = 0.5 - 1 )</option>
     <option value="2">One joint set ( J<sub>n</sub> = 2 )</option>
@@ -29,11 +38,25 @@
     <option value="9">Three joint sets ( J<sub>n</sub> = 9 )</option>
     <option value='10'>Crushed rock, earthlike ( J<sub>n</sub> = 20 )</option>
     </select><br>
+    Coefficient of J<sub>n</sub>:<br>
+    <select name="group11" id="group11" value="1" style="font-size:20px">
+        <option value="1">*1</option>
+        <option value="1">*2</option>
+        <option value="2">*3</option>
+    </select>
+    <fieldset>
+        Notes: 
+        <p>(i) For tunnel intersections, use (3.0 x Jn); </p>
+        <p>(ii) For portals, use (2.0 x Jn)</p>
+    </fieldset>
 </fieldset>
    
 <fieldset>
-    J<sub>r</sub>(Joint Roughness Number):<br>
-    <select name="group2" id="group2" value="1" style="font-size:15px">
+    J<sub>r</sub>(Joint Roughness Number)-Choose one of the two rock types[(I),(II)]:<br>
+    (I)<br>
+    a) Rock-wall contact,<br>
+    b) rock-wall contact before 10 cm shear.<br>
+    <select name="group2" id="group2" value="1" style="font-size:20px">
     <option value="1">1</option>
     <option value="1">Discontinuous joints ( J<sub>r</sub> = 4)</option>
     <option value="2">Rough or irregular, undulating ( J<sub>r</sub> = 3)</option>
@@ -42,19 +65,32 @@
     <option value="5">Rough or irregular, planar ( J<sub>r</sub> = 1.5)</option>
     <option value="6">Smooth, planar (J<sub>r</sub> = 1.0)</option>
     <option value="7">Slickensided, planar (J<sub>r</sub> = 0.5)</option>
-    <option value="8">Zone containing clay minerals thick enough to prevent rock-
-    wall contact (J<sub>r</sub> = 1.0)
-    </option>
-    <option value="9">Sandy, gravelly or crushed zone thick enough to prevent rock-
-    wall contact (J<sub>r</sub> = 1.0)
-    </option>
     </select><br>
+    <fieldset>
+        Note : 
+        <p> i) Descriptions refer to small scale features,
+and intermediate scale features, in that order.</p>
+   </fieldset><br>
+   (II)<br>
+   c) No rock-wall contact when sheared:<br>
+    <select name="group12" id="group12" value="1" style="font-size: 20px;">
+        <option value="8">Zone containing clay minerals thick enough to prevent rock-wall contact (J<sub>r</sub> = 1.0)
+            </option>
+            <option value="9">Sandy, gravelly or crushed zone thick enough to prevent rock-wall contact (J<sub>r</sub> = 1.0)
+            </option>
+    </select><br>
+    <fieldset>
+        Notes:
+    <p>i) Add 1.0 if the mean spacing of the relevant joint set is greater than 3 m.</p>
+    <p>ii) Jr = 0.5 can be used for planar, slickensided joints having lineations,
+    provided the lineations are oriented for minimum strength.</p>
+    </fieldset>
 </fieldset>
     
 <fieldset>
     J<sub>a</sub> (Joint Alteration Number)-Choose one of the two rock types [(I),(II)] below:<br>
     (I) Contact between joint walls<br>
-    <select name="group3" id="group3" value="1" style="font-size:15px">
+    <select name="group3" id="group3" value="1" style="font-size:20px">
         <option value="1">1</option>
         <option value="1">
             CLEAN JOINTS, healed or welded joints:  filling of quartz, epidote, etc. ( Ja = 0.75 )
@@ -73,7 +109,7 @@
         </option>
     </select><br>
     (II) Some or no wall contact<br>
-    <select name="group10" id="group10" value="1" style="font-size:15px">
+    <select name="group10" id="group10" value="1" style="font-size:20px">
         <option value="1">1</option>
         <option value="1">
             Filling of friction materials, sand, silt calcite, etc. (non-softening), thin filling(< 5mm) (Ja = 4).
@@ -104,7 +140,7 @@
 
 <fieldset>
     J<sub>w</sub> (Joint Water Reduction Factor):<br>
-    <select name="group4" id="group4" value="1" style="font-size:15px">
+    <select name="group4" id="group4" value="1" style="font-size:20px">
         <option value="1">1</option>
         <option value="1">Dry excavations or minor inflow, i.e. < 5 l/min locally. <br>
             (&rho;<sub>w</sub> < 1 kg &frasl; m<sup>3</sup><br>, Jw = 1)
@@ -124,13 +160,18 @@
         <option value="6">Exceptionally high inflow or water pressure continuing without noticeable decay.<br>
         (&rho;<sub>w</sub> >10 kg &frasl; m<sup>3</sup><br>, Jw = 0.1-0.05)    
         </option>
-    </select><br> 
+    </select><br>
+    <fieldset>
+        Note: 
+        <p>(i) The last four factors are crude estimates. Increase Jw if drainage measures are installed.</p>
+        <p>(ii) Special problems caused by ice formation are not considered.</p>
+    </fieldset>
 </fieldset>
     
 <fieldset>
         SRF (Stress Reduction Factor)-Choose one of the four rock types [(I),(II),(III),(IV)] below.<br>
     (I) Weakness zones intersecting excavation<br>
-    <select name="group5" id="group5" value="1" style="font-size:15px"> 
+    <select name="group5" id="group5" value="1" style="font-size:20px"> 
     <option value="1">1</option>  
     <option value="1">
     Multiple weakness zones with clay or chemically disintegrated rock, very loose surrounding rock (any depth) (SRF = 10)
@@ -154,9 +195,13 @@
     Loose, open joints, heavily jointed or "sugar-cube", etc. (any depth)
     ( SRF = 5)
     </option>
+    <fieldset>
+        Note: 
+        <p>(i) Reduce these SRF values by 25 - 50% if the relevant shear zones only influence, but do not intersect the excavation.</p>
+    </fieldset>
     </select><br>
     (II) Competent rock, rock stress problems<br>
-    <select name="group6" id="group6" value ="1" style="font-size:15px">
+    <select name="group6" id="group6" value ="1" style="font-size:20px">
     <option value="1">1</option>  
     <option value="1">
     Low stress, near surface, open joints (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> >200; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> < 0.01) ( SRF = 2.5)
@@ -176,10 +221,17 @@
     <option value="6">
         Heavy rock burst (strain burst) and immediate dynamic deformation in massive rock  (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> < 2>; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> > 1 ) ( SRF = 200-400)
     </option>
+    <fieldset>
+        Notes: 
+        <p>(ii) For strongly anisotropic stress field (if measured): when 5 < &sigma;<sub>1</sub> &frasl; &sigma;<sub>3</sub> < 10, reduce &sigma;<sub>c</sub> to 0.75 &sigma;<sub>c</sub> . When &sigma;<sub>1</sub> &frasl; &sigma;<sub>3</sub> > 10, reduce &sigma;<sub>c</sub> to 0.5 &sigma;<sub>c</sub></p>
+        <p>
+           (iii) Few case records available where depth of crown below surface is less than span width. Suggest SRF increase from 2.5 to 5 for low stress cases.
+        </p>
+    </fieldset>
     </select><br>
     (III)Squeezing rock<br>
     Plastic flow of incompetent rock under the influence of high pressure<br>
-    <select name="group7" id="group7" value="1" style="font-size:15px">
+    <select name="group7" id="group7" value="1" style="font-size:20px">
         <option value="1">1</option>  
         <option value="1">
             Mild squeezing rock pressure  (&sigma;<sub>c</sub> &frasl; &sigma;<sub>1</sub> =1-5; &sigma;<sub>&theta;</sub> &frasl; &sigma;<sub>c</sub> > 1 ) ( SRF = 5-10)
@@ -190,7 +242,7 @@
     </select><br>
     (IV)Swelling rock<br>
     Chemical swelling activity depending on presence of water<br>
-    <select name="group8" id="group8" value="1" style="font-size:15px;">
+    <select name="group8" id="group8" value="1" style="font-size:20px;">
         <option value="1">1</option>  
         <option value="1">
             Mild swelling rock pressure ( SRF = 5-10)
@@ -198,18 +250,17 @@
         <option value="2">
             eavy swelling rock pressure ( SRF = 10-15)
         </option>
-    </select><br>
+    </select><br>    
+</fieldset>
 
+<fieldset>
     What is the tunnel span or wall height(m)?<br>
+    <input  style="font-size: 25px;" size="30"><br>   
 </fieldset>
 
 <fieldset>
     Type or use of underground opening<br>
-    <input  type="text" name="text" size="30"><br>   
-</fieldset>
-
-<fieldset>
-    <select id="group9" name="group9" value="1" style="font-size: 15px;">
+    <select id="group9" name="group9" value="1" style="font-size: 20px;">
         <option value="1">1</option>
         <option value="1">
             Temporary mine openings ( ESR = 3.5 )
@@ -234,7 +285,7 @@
     
 <input type="submit" name="submit" value="Calculation" style="font-size: 20px;">
 </form>
-<span id="res_box"> 
+<span id="res_box" style="font-size: 20px;"> 
     The Q value : {{res}}
 </span> 
 

@@ -63,8 +63,7 @@ input[type=submit] {
 }
 
 input[type=text] {
-    border: 5px ;
-    padding: 0;
+    border: 5px solid cadetblue ;
 }
 
 input[name=year] {
