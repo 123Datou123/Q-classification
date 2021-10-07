@@ -63,7 +63,7 @@ input[type=submit] {
 }
 
 input[type=text] {
-    border: 0;
+    border: 5px ;
     padding: 0;
 }
 
