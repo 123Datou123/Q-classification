@@ -190,17 +190,17 @@ footer {
     text-align: center;
     padding: 20px;
 }
-/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示*/
 @media screen and (max-width: 700px) {
     .row {   
         flex-direction: column;
     }
 }
-x`
+
 /* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
-/* @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .navbar a {
         float: none;
         width: 100%;
     }
-} */ 
+} 
