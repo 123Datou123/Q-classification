@@ -15,10 +15,10 @@
     </select> <br>
      <fieldset>
          Notes:
-        <p style="font-size: 15px;">
+        <p >
             (i) Where RQD is reported or measured as < 10 (including 0), a nominal value of 10 is used to evaluate Q.
         </p>
-        <p style="font-size: 15px;">
+        <p>
             (ii) RQD intervals of 5, i.e. 100, 95, 90, etc. are sufficiently accurate.
         </p>
     </fieldset>
@@ -38,21 +38,16 @@
     <option value="9">Three joint sets ( J<sub>n</sub> = 9 )</option>
     <option value='10'>Crushed rock, earthlike ( J<sub>n</sub> = 20 )</option>
     </select><br>
-    Coefficient of J<sub>n</sub>:<br>
+    Coefficient of J<sub>n</sub> with respect to tunnel/caven position:<br>
     <select name="group11" id="group11" value="1" style="font-size:20px">
-        <option value="1">*1</option>
-        <option value="1">*2</option>
-        <option value="2">*3</option>
+        <option value="1">3=tunnel intersections(use 3.0 x Jn)</option>
+        <option value="1">2=portals (use 2.0 x Jn)</option>
+        <option value="2">1=none of the above(use Jn)</option>
     </select>
-    <fieldset>
-        Notes: 
-        <p>(i) For tunnel intersections, use (3.0 x Jn); </p>
-        <p>(ii) For portals, use (2.0 x Jn)</p>
-    </fieldset>
 </fieldset>
    
 <fieldset>
-    J<sub>r</sub>(Joint Roughness Number)-Choose one of the two rock types[(I),(II)]:<br>
+    J<sub>r</sub>(Joint Roughness Number)-Choose one of the two wall contact types[(I) or (II)]:<br>
     (I)<br>
     a) Rock-wall contact,<br>
     b) rock-wall contact before 10 cm shear.<br>
@@ -79,17 +74,19 @@ and intermediate scale features, in that order.</p>
             </option>
             <option value="9">Sandy, gravelly or crushed zone thick enough to prevent rock-wall contact (J<sub>r</sub> = 1.0)
             </option>
+            <option value="10">
+                planar, slickensided joints having lineations, provided the lineations are oriented for minimum strength (Jr = 0.5)
+            </option>
     </select><br>
-    <fieldset>
-        Notes:
-    <p>i) Add 1.0 if the mean spacing of the relevant joint set is greater than 3 m.</p>
-    <p>ii) Jr = 0.5 can be used for planar, slickensided joints having lineations,
-    provided the lineations are oriented for minimum strength.</p>
-    </fieldset>
+    Optional parameters:<br>
+    <select name="group14" id="group14" value="1" style="font-size: 20px;">
+    <option value="0">+0</option>
+    <option value="1">+1.0 (Add 1.0 if the mean spacing of the relevant joint set is greater than 3 m.)</option>
+    </select>   
 </fieldset>
     
 <fieldset>
-    J<sub>a</sub> (Joint Alteration Number)-Choose one of the two rock types [(I),(II)] below:<br>
+    J<sub>a</sub> (Joint Alteration Number)-Choose one of the two rock types [(I) or (II)] below:<br>
     (I) Contact between joint walls<br>
     <select name="group3" id="group3" value="1" style="font-size:20px">
         <option value="1">1</option>
@@ -170,7 +167,7 @@ and intermediate scale features, in that order.</p>
 </fieldset>
     
 <fieldset>
-        SRF (Stress Reduction Factor)-Choose one of the four rock types [(I),(II),(III),(IV)] below.<br>
+        SRF (Stress Reduction Factor)-Choose one of the four rock types [(I),(II),(III) or (IV)] below.<br>
     (I) Weakness zones intersecting excavation<br>
     <select name="group5" id="group5" value="1" style="font-size:20px"> 
     <option value="1">1</option>  
